@@ -25,6 +25,7 @@ RUN bundle install --without=test
 EXPOSE 8080
 
 VOLUME /var/cache/r10k
-VOLUME /etc/puppetlabs/code/environments
+#VOLUME /etc/puppetlabs/code/environments
+RUN mkdir -p /etc/puppetlabs/code/environments
 
 ENTRYPOINT ["./entrypoint.sh"]
